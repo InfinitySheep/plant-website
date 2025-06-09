@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Instructions - Happy Grow</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/main.css">
+		<!--LIVE SERVER: ../static/main.css-->
+		<!--PYTHON: "{{ url_for('static', filename='css/main.css') }}"-->
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header">
+
+				<!-- Logo -->
+					<h1><a href="{{ url_for('index') }}" id="logo">
+						<img src="{{ url_for('static', filename='images/logo.png') }}",alt="Happy Grow Logo"style="height: 50px; vertical-align: middle; margin-right: 10px;">
+						Happy <em>Grow</em></a></h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="{{ url_for('index') }}" >Home</a></li>
+							<li><a href="{{ url_for('statistics') }}" >Statistics</a></li>
+							<li class="current"><a href="{{ url_for('instructions') }}" >Instructions</a></li>
+							<li><a href="{{ url_for('contactUs') }}" >Contact Us</a></li>
+							<li>
+								<button class="profile-btn",type="button">
+									<img src="{{ url_for('static', filename='images/profile-pic.png') }}" class="profile-btn" alt="profilePicture" width="60" height="60">
+								</button>
+							</li>
+						</ul>
+					</nav>
+
+			</div>
+
+		<!-- Main -->
+			<section id="main-wrapper">
+
+				<section class="intro">
+					<h2>Overview</h2>
+					<p>This page shows you how to set up your plant device and get the most out of the website. 
+					Whether you're syncing your sensor or checking your plant's mood, you'll find all the steps here.</p>
+					
+					<h2>Jump Ahead</h2>
+					<section id="table-of-contents">
+						<ul>
+							<li>
+								<ul class="links">
+									<li><a href="#device-setup">1. Set Up the Plant Device</a></li>
+									<li><a href="#how-it-works">2. How the Sensor Works</a></li>
+									<li><a href="#troubleshooting">3. Troubleshooting</a></li>
+									<li><a href="#home-tab">4. Home Tab</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<ul class="links">									
+									<li><a href="#stats-tab">5. Statistics</a></li>
+									<li><a href="#logging">6. Logging Plant Care</a></li>
+									<li><a href="#reminders">7. How Reminders Work</a></li>
+									<li><a href="#customize">8. Customizing Your Dashboard</a></li>
+								</ul>
+							</li>
+						</ul>
+							
+							
+					</section>																
+				</section>
+
+				<section class = "main-instructions">		
+
+					<section>
+						<h2>🌿 Section 1: How to Use the Plant Device</h2>
+						
+
+						<section>
+							<h3 class = "instructions-section" id="device-setup">1. Device Setup</h3>
+							<p>Getting started is easy! Just follow these steps:</p>
+							<ul>
+								<li><p>Insert the sensor into the soil near your plant's roots. Make sure it’s deep enough to measure moisture accurately.</p></li>
+								<li><p>Connect the device to Wi-Fi or Bluetooth, depending on your model. Follow the pairing instructions in the app or on-screen.</p></li>
+								<li><p>Open the website or mobile app. You should see your plant appear in the dashboard within a few minutes.</p></li>
+								<li><p>(Optional but helpful) Add a photo of your plant to personalize your dashboard. You can also upload a short GIF or video if your device allows it.</p></li>
+							</ul>
+							
+							<div class="tip-box">
+								📷 <strong>Tip:</strong> Visuals make it easier to identify which plant you're monitoring—especially if you're tracking more than one.
+							</div>
+						</section>
+
+
+						<section>	
+							<h3 class = "instructions-section" id="how-it-works">2. How it Works</h3>
+							<p>Once your sensor is in place and connected:</p>
+							<ul>
+								<li>The device tracks data like soil moisture, light exposure, and temperature.</li>
+								<br>
+								<li>This data is automatically sent to your plant dashboard on the website or app.</li>
+								<br>
+								<li>You’ll be able to see real-time updates as well as a history of your plant’s health.</li>	
+							</ul>
+							<div class="tip-box">
+								📡 The device typically updates every hour. If your plant’s data looks old, try refreshing the page or reconnecting the sensor.
+							</div>
+						</section>
+
+						<section>
+							<h3 class = "instructions-section" id="troubleshooting">3. Troubleshooting Tips</h3>
+							<p>Here’s what to do if something goes wrong:</p>
+
+							<ul>
+								<li><p><strong>Sensor not showing up on the dashboard?</strong></p></li>
+							</ul>
+							<p>Make sure it’s powered on and properly connected to Wi-Fi or Bluetooth. Try removing and reinserting the battery or restarting the device.</p>
+							
+							<ul>
+								<li><p><strong>Red light flashing on the sensor?</strong></p></li>
+							</ul>
+							<p>This usually means it lost connection. Reconnect it through the app or hold the reset button (if your model has one) for 5 seconds.</p>
+
+							<ul>
+								<li><p><strong>Data not updating?</strong></p></li>
+							</ul>
+							<p>Check your internet connection or try moving the sensor closer to the router. Low battery can also cause delays.</p>	
+						</section>
+
+
+					</section>
+
+					<section>
+						<h2>💻 Section 2: How to Use the Website</h2>
+
+						<section>
+							<h3 class = "instructions-section" id="home-tab">4. Home Tab Overview</h3>
+							<p>The <strong>Home tab </strong>is your plant’s main hub. Here’s what you’ll see:</p>
+							<ul>
+								<li> 
+									A health summary with emojis:
+									<ul>
+										<li>😊 = Healthy and happy</li>
+										<li>🥵 = Dry soil</li>
+										<li>🌑 = Low light</li>
+										<li>⚠️ = Needs attention</li>
+									</ul>
+								</li>
+								<li>Your <strong>last care event</strong> (like watering or fertilizing)</li>
+								<li>A list of upcoming care tasks</li>
+							</ul>
+							<p>This page helps you know at a glance how your plant is doing.</p>
+						</section>
+
+						<section>
+							<h3 class = "instructions-section" id="stats-tab">5. Statistics Tab</h3>
+							<p>Want to get nerdy with it? The <strong>Statistics tab</strong> shows detailed trends:</p>
+							<ul>
+								<li>A timeline of <strong>moisture levels</strong>, so you can track how fast your plant dries out.</li>
+								<br>
+								<li>Graphs for <strong>light exposure</strong>, temperature, and other tracked data.
+							</ul>
+						</section>
+
+						<section>
+
+							<h3 class = "instructions-section" id="logging">6. Logging Plant Care Actions</h3>
+
+							<section>
+								<h4 class = "instructions-section">Log Actions (Home Tab)</h4>
+								<p>When you water, fertilize, or prune your plant, just click one of the buttons next to the plant image under the <strong>"Log Actions" </strong>section.</p>
+								<p><strong>Example Buttons:</strong></p>
+								<ul>
+									<li>💧 Watered</li>
+									<li>🌿 Fertilized</li>
+									<li>✂️ Pruned</li>
+								</ul>
+								<p>These make it easy to log care without leaving the page.</p>
+								<p>You'll also see a yellow reminder banner if your plant needs attention (e.g., “Your fern needs watering today!”).</p>
+								<div class="tip-box">
+								📷 Tip: Visuals and emojis make care actions quicker and easier to recognize.
+								</div>
+							</section>
+
+							<section>
+								<h4 class = "instructions-section">Logging Tab (View Past Actions)</h4>
+								<p>To see what you’ve done over time, go to the <strong>"Logging" tab.</strong></p>
+								<p>There, you’ll find:</p>
+								<ul>
+									<li>A full history of your actions (dates + what you did)</li>
+									<li>The most recent care events per plant</li>
+									<li>Optional filters (by plant, type of care, date)</li>
+								</ul>
+								<p>Keeping this tab separate helps you focus on care now while still being able to <strong>review your habits</strong> and <strong>track your consistency</strong>.</p>
+				
+							</section>
+
+						</section>
+
+						<section>
+							<h3 class = "instructions-section" id="reminders">7. Reminders</h3>
+							<p>The site sends reminders based on your chosen schedule. For example:</p>
+							<ul>
+								<li>If your plant needs water every 5 days, you'll get a notification or alert right on the Home tab.</li>
+								<li>You can snooze or skip reminders if needed.</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3 class = "instructions-section" id="customize">8. Customization</h3>
+							<p>Want to make your plant feel more like yours?</p>
+							<ul>
+								<li>click the edit icon next to your plant image name (pencil icon)</li>
+								<li>Here, you can change your plant’s photo, name, and adjust care intervals (like how often it needs water).</li>
+							</ul>
+						</section>
+
+					</section>
+					
+				</section>
+
+		</section>
+	
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href= "https:discord.gg/cYBAXtJfNt" target="_blank" rel="noopener noreferrer" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; 2025 Matt and Ujas. All rights reserved</li>
+					</div>
+
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

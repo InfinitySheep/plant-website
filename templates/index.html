@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Home - Happy Grow</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/main.css">
+		<!--LIVE SERVER: ../static/main.css-->
+		<!--PYTHON: "{{ url_for('static', filename='css/main.css') }}"-->
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="{{ url_for('index') }}" id="logo">
+							<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Happy Grow Logo"style="height: 50px; vertical-align: middle; margin-right: 10px;">
+							Happy <em>Grow</em></a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="{{ url_for('index') }}" >Home</a></li>
+								<li><a href="{{ url_for('statistics') }}" >Statistics</a></li>
+								<li><a href="{{ url_for('instructions') }}" >Instructions</a></li>
+								<li><a href="{{ url_for('contactUs') }}" >Contact Us</a></li>
+
+								<li>
+									<button class="profile-btn" type="button">
+										<img src="{{ url_for('static', filename='images/profile-pic.png') }}" class="profile-btn" alt="profilePicture" width="60" height="60">
+									</button>
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+	<!--PLANT SCREEN-->
+		<section class="current-plant">
+			<div class="horizontal-container">
+
+				<div class="vertical-container">
+				<img id="plant-image" src="{{ url_for('static', filename='images/snake-plant.png') }}" alt="plant-image">
+				<img id="progress-bar" src="{{ url_for('static', filename='images/emotion5.png') }}" alt="emotion1">
+				</div>
+
+				<div class="plant-info">
+					<h1>Snake Plant <span class="sci-name">(Dracaena trifasciata)</span></h1>
+					
+					<div class="plant-status">
+						<p><strong>Soil Moisture:</strong> 45%</p>
+						<p><strong>Soil Temperature:</strong> 22°C</p>
+						<p><strong>Air Humidity:</strong> 55%</p>
+						<p><strong>Light Level:</strong> Moderate</p>
+						<p><strong>Last Watered:</strong> 2 days ago</p>
+						<p><strong>Overall Mood:</strong> 😊 Thriving</p>
+				</div>
+			</div>
+	
+		</section>
+ 
+			<!-- Footer -->
+				<div id="footer">
+					
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href= "https:discord.gg/cYBAXtJfNt" target="_blank" rel="noopener noreferrer" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 2025 Matt and Ujas. All rights reserved</li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

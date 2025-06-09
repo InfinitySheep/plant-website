@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Statistics - Happy Grow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+            <h1><a href="{{ url_for('index') }}" id="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Happy Grow Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
+                Happy <em>Grow</em>
+            </a></h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li class="current"><a href="{{ url_for('statistics') }}">Statistics</a></li>
+                    <li><a href="{{ url_for('instructions') }}">Instructions</a></li>
+                    <li><a href="{{ url_for('contactUs') }}">Contact Us</a></li>
+                    <li>
+                        <button class="profile-btn" type="button">
+                            <img src="{{ url_for('static', filename='images/profile-pic.png') }}" class="profile-btn" alt="profilePicture" width="60" height="60">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main -->
+        <section class="wrapper style1">
+            <article>
+                <header class="major">
+                    <h2>Daily Light Level</h2>
+                    <p>This graph shows the light levels throughout a 24-hour period.</p>
+                </header>
+
+                <div style="width: 100%; max-width: 800px; margin: auto;">
+                    <canvas id="lightChart"></canvas>
+                </div>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="icons">
+                <li><a href="https://discord.gg/cYBAXtJfNt" target="_blank" rel="noopener noreferrer" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+            </ul>
+            <div class="copyright">
+                <ul class="menu">
+                    <li>&copy; 2025 Matt and Ujas. All rights reserved</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inject Python data from Flask into JS variables -->
+    <script>
+        window.hours = {{ hours | tojson | safe }};
+        window.levels = {{ levels | tojson | safe }};
+    </script>
+
+    <!-- Your external chart script -->
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+
+    <!-- Initialize chart after DOM is loaded -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            renderChart(window.hours, window.levels);
+        });
+    </script>
+</body>
+</html>
